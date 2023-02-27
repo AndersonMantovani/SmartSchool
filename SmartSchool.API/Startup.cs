@@ -26,11 +26,16 @@ namespace SmartSchool.API
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddDbContext<SmartContext>(
-				context => context.UseSqlite(Configuration.GetConnectionString("Default")
-				));
+			services.AddDbContext<SmartContext>(context => context.UseSqlite(Configuration.GetConnectionString("Default")));
 
-			services.AddControllers();
+			//services.AddSingleton<IRepository, Repository>();
+			//services.AddTransient<IRepository, Repository>();
+			services.AddScoped<IRepository, Repository>();
+
+			services.AddControllers()
+				.AddNewtonsoftJson(
+				opt => opt.SerializerSettings.ReferenceLoopHandling =
+				Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
