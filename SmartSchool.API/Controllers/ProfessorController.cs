@@ -31,6 +31,7 @@ namespace SmartSchool.API.Controllers
 			return Ok(_mapper.Map<IEnumerable<ProfessorDto>>(professores));
 
 		}
+
 		[HttpGet("getRegister")]
 		public IActionResult GetRegister()
 		{

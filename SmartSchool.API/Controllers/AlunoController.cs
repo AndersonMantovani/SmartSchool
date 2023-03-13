@@ -43,8 +43,6 @@ namespace SmartSchool.API.Controllers
 			return Ok(aluno);
 
 		}
-
-		
 		
 		[HttpPost]
 		public IActionResult Post(AlunoRegistrarDto model)
