@@ -21,6 +21,12 @@
             API Aluno ...
             </summary>
         </member>
+        <member name="M:SmartSchool.API.V2.Controllers.AlunoController.Get(SmartSchool.API.Helpers.PageParams)">
+            <summary>
+            Método responsavel para retornar todos os alunos
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:SmartSchool.API.V2.Controllers.AlunoController.GetById(System.Int32)">
             <summary>
             Retorna apenas um aluno pelo seu Id 

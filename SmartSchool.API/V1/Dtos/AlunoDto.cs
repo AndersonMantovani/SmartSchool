@@ -1,6 +1,4 @@
-﻿using SmartSchool.API.Models;
-using System.Collections.Generic;
-using System;
+﻿using System;
 
 namespace SmartSchool.API.V1.Dtos
 {
@@ -13,6 +11,5 @@ namespace SmartSchool.API.V1.Dtos
         public int Idade { get; set; }
         public DateTime DataIni { get; set; }
         public bool Ativo { get; set; }
-
     }
 }
